@@ -1,0 +1,17 @@
+.error_div{
+    color: rgb(206, 35, 35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 50%;
+    width: 100%;
+}
+
+.loading_div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.4rem;
+}

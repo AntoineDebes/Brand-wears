@@ -1,0 +1,32 @@
+import React, { useState } from "react";
+import Loading from "../loading/Loading";
+import MessageBox from "../loading/MessageBox";
+import AllProducts from "./AllProducts";
+import { ProductContext } from "../../contexts/ProductContext";
+
+export default function WomenCard() {
+  const { value1, value3} = React.useContext(ProductContext);
+  const [products] = value1
+  const [error] = useState(false);
+  const [loading] = value3
+
+  return (
+    <>
+      {loading ? (
+        <Loading />
+      ) : error ? (
+        <MessageBox error={error} />
+      ) : (
+        <>
+          {products &&
+            products.map((product) => {
+              if (product.sex === "female") {
+                return <AllProducts product={product} />;
+              }
+              return null;
+            })}
+        </>
+      )}
+    </>
+  );
+}

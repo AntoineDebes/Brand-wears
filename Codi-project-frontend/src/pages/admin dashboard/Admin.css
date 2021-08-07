@@ -1,0 +1,169 @@
+.admin--container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.admin--navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgb(32, 32, 58);
+    color: oldlace;
+    height: 15vh;
+}
+
+.admin--header{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+.nav-links .link{
+    color: oldlace;
+}
+
+.admin--nav-links{
+    width: 25%;
+}
+
+
+
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+
+.admin--signin{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+
+
+.admin--product--view{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid rgb(212, 212, 212);
+    
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.admin--product--view img{
+    width: 200px;
+    height: 200px;
+}
+
+.admin--product--view ul li {
+    list-style: none;
+}
+
+.user--page{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.table--header{
+    background-color: rgb(32, 32, 58);
+    color: white;
+    margin-top: 20px;
+}
+
+.table--data{
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+}
+
+.table--data td{
+    padding: 10px;
+}
+
+.table--header th{
+    padding: 5px;
+}
+
+.add--user{
+    color: white;
+    background-color: rgb(32, 32, 58);
+    margin: 20px auto auto 20px;
+    transition: ease 0.2s;
+    border: none;
+    padding: 5px;
+}
+.add--user:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+.user--form--container{
+    width: 100%;
+    height: 80vh;
+}
+
+.user--form{
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form--label--input{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form--label--input label{
+    align-self: flex-start;
+    margin-bottom: 5px;
+    color: rgb(48, 48, 48);
+    font-weight: 700;
+}
+
+.radio--inline {
+    padding-left: 20px;
+}
+
+.form--btn{
+    color: white;
+    background-color: rgb(32, 32, 58);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: ease 0.2s;
+    margin-top: 10px;
+}
+
+.form--btn:hover{
+    opacity: 0.9;
+}
+
+.user--error{
+    text-align: center;
+    width: 100%;
+    color: red;
+    font-size: 1.3rem;
+}

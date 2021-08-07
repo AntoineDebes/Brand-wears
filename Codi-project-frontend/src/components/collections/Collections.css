@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+
+*{
+    font-family: "Open Sans", sans-serif;
+}
+
+
+
+.collections{
+    width: 70%;
+    margin: 2rem auto ;
+    height: 500px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a b c"
+                         "a d c";
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}   
+
+.collection_one--container{
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    position: relative;
+    cursor: pointer;
+}
+.collection_four--container{
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    position: relative;
+    cursor: pointer;
+}
+
+.collection_two--container{
+    display: flex;
+    grid-area: b;
+    max-height: 245px;
+    opacity: 1;
+    color: #e08040;
+    cursor: pointer;
+    position: relative;
+}
+
+.collection_three--container{
+    display: flex;
+    grid-area: d;
+    max-height: 245px;
+    color: #e08040;
+    cursor: pointer;
+    position: relative;
+}
+
+.collections_text_T {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.collections_image_T{
+    height: 245px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.collections_image_T img{
+    height: 100%;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+
+.collections_image{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.collections_image img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: 0.3s ease;
+}
+
+.collection_two--container:hover img{
+    transform: scale(1.1);
+}
+
+.collection_three--container:hover img{
+    transform: scale(1.1);
+}
+
+.collection_one--container:hover img{
+    transform: scale(1.1);
+}
+
+.collection_four--container:hover img{
+    transform: scale(1.1);
+}
+.collections_text{
+    left: 20%;
+    right: 30%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    height: 80%;
+}
+
+.collections_title{
+    font-size: 1.8em;
+    font-weight: 300;
+    border-bottom: 2px solid #e08040;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+.collections_for{
+    font-size: 2em;
+    line-height: 2em;
+    font-weight: 600;
+}

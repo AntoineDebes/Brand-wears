@@ -1,0 +1,19 @@
+/* wrapes all the page*/
+.wrapper {
+  margin: 0 auto;
+}
+
+.main__inset__background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.main__form input {
+  border-radius: 9999px;
+  border: 1px solid gray;
+  padding: 0.2rem 0.5rem;
+}

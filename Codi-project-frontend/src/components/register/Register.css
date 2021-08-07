@@ -1,0 +1,31 @@
+.main__form__sign-up {
+  position: relative;
+}
+
+.main__form__sign-up__go-back {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+}
+
+.main__form__sign-up__go-back > i {
+  font-size: 25px;
+}
+
+.form__sign-up {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.signUp__error {
+  color: red;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}

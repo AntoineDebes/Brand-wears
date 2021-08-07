@@ -1,0 +1,186 @@
+/* header part*/
+.header {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header-container {
+  /*the part of the search and image and cart/login*/
+  padding-top: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.header-container__search {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.header-container__logo {
+  width: 10rem;
+}
+
+.header-container__logo--h1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_span {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.header-container__cart--btn-login {
+  padding: 0.5em 2em;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.1 ease-in;
+}
+
+.header-container__cart--btn-login:hover {
+  color: #d44f38;
+}
+
+.header-container__cart--btn-cart {
+  padding: 0.5em;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+
+.header-container__cart--btn-cart:hover {
+  color: #d44f38;
+}
+
+.header-container__cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header__navbar {
+  /*Header second section the list of the navbar*/
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header__navbar--ul {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  list-style-type: none;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  background-color: #fff;
+}
+
+.header__navbar--ul > li {
+  padding: 0.5rem 0;
+  background-image: linear-gradient(#d44f38, #d44f38);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.header__navbar--ul > li > a > i {
+  padding-right: 0.4rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.header__navbar--ul > li:hover {
+  background-size: 100% 3px, auto;
+  padding-bottom: 0;
+}
+
+input {
+  outline: none;
+}
+input[type="search"] {
+  box-sizing: content-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.input_div {
+  width: 140px;
+}
+
+input[type="search"] {
+  background: #fff
+    url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat
+    9px center;
+  border: solid 1px #ccc;
+  padding: 9px 10px 9px 32px;
+  width: 55px;
+
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+input[type="search"]:focus {
+  width: 130px;
+  background-color: #fff;
+  border-color: #d44f38;
+  -webkit-box-shadow: 0 0 5px #d44f38;
+  -moz-box-shadow: 0 0 5px #d44f38;
+  box-shadow: 0 0 5px #d44f38;
+}
+
+.span_cart_counter {
+  background-color: #eb2460;
+  align-self: center;
+  border-radius: 50%;
+  height: 1.7rem;
+  width: 2rem;
+}
+
+.span_cart_counter span {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_cart_counter {
+  display: flex;
+  justify-content: center;
+}
