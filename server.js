@@ -3,15 +3,18 @@ import mongoose from "mongoose";
 import "dotenv/config";
 import bodyParser from "body-parser";
 import appRoutes from "./routes/index.js";
-// const path = require("path");
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 
 const app = express();
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-app.use(express.static(path.resolve(__dirname, "Codi-project-frontend/build")));
-const port = 3001;
+
+app.use(
+  express.static(path.resolve(__dirname, "./Codi-project-frontend/build"))
+);
+const port = process.env.PORT || 4000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(json());
@@ -34,7 +37,7 @@ mongoose.connection
 
 app.get("*", (req, res) => {
   res.sendFile(
-    path.resolve(__dirname, "Codi-project-frontend/build", "index.html")
+    path.resolve(__dirname, "./Codi-project-frontend/build", "index.html")
   );
 });
 
