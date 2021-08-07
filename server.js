@@ -3,11 +3,15 @@ import mongoose from "mongoose";
 import "dotenv/config";
 import bodyParser from "body-parser";
 import appRoutes from "./routes/index.js";
-import path from "path";
+// const path = require("path");
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 app.use(express.static(path.resolve(__dirname, "Codi-project-frontend/build")));
-const port = process.env.PORT || 3001;
+const port = 3001;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(json());
