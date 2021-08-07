@@ -32,7 +32,7 @@ export default function Product(props) {
     } else {
       setCart([...cart, { product_id: product._id }]);
       axios
-        .put("http://localhost:4000/user/cart", {
+        .put(`${process.env.REACT_APP_API_URL}/user/cart`, {
           token: localToken,
           product_id: product._id,
           quantity: 1,

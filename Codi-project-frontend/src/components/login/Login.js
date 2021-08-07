@@ -10,7 +10,7 @@ function Login(props) {
 
   const login = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:4000/user/login", {
+    Axios.post(`${process.env.REACT_APP_API_URL}/user/login`, {
       username: usernameLog,
       password: passwordLog,
     })

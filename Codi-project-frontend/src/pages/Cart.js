@@ -14,7 +14,7 @@ export default function Cart() {
   const removeFromCart = (item) => {
     let localToken = localStorage.getItem("token");
     axios
-      .put("http://localhost:4000/user/cartremove", {
+      .put(`${process.env.REACT_APP_API_URL}/user/cartremove`, {
         token: localToken,
         product_id: item._id,
       })

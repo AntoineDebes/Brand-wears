@@ -16,7 +16,7 @@ export const ProductProvider = (props) => {
     setCart(props.cartInfos);
     setLoading(true);
     axios
-      .get("http://localhost:4000/product")
+      .get(`${process.env.REACT_APP_API_URL}/product`)
       .then((res) => {
         setProducts(res.data);
         setLoading(false);

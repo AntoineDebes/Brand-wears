@@ -9,7 +9,7 @@ export default function AdminUsers() {
 
   const fetchData = () => {
     axios
-      .get("http://localhost:4000/user/users")
+      .get(`${process.env.REACT_APP_API_URL}/user/users`)
       .then((res) => {
         setUsers(res.data.user);
         console.log(res.data.user);
@@ -23,55 +23,66 @@ export default function AdminUsers() {
     fetchData();
   }, []);
 
- 
-  
-  
-
-  const deleteUser = (id) =>{
-  
-    const endpoint = `http://localhost:4000/user/${id}`;
+  const deleteUser = (id) => {
+    const endpoint = `${process.env.REACT_APP_API_URL}/user/${id}`;
 
     fetch(endpoint, {
-      method:"DELETE"
+      method: "DELETE",
     })
-    .then(data => console.log(data))
-    .catch(err => {
-     setError({
-       message : err.message
-     })
-    })
-    window.location.reload()
-  }
+      .then((data) => console.log(data))
+      .catch((err) => {
+        setError({
+          message: err.message,
+        });
+      });
+    window.location.reload();
+  };
 
   return (
-      <>
+    <>
       <Link to="/admin/add-user">
-      <button className="add--user"> <i class="fas fa-plus"></i> New User</button>
+        <button className="add--user">
+          {" "}
+          <i class="fas fa-plus"></i> New User
+        </button>
       </Link>
-     
-    <table className="user--page">
+
+      <table className="user--page">
         <tr className="table--header">
-            <th>Name</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Admin</th>
-            <th>Update</th>
-            <th>Delete</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Admin</th>
+          <th>Update</th>
+          <th>Delete</th>
         </tr>
 
-      {users.map((item) => {
-        return (
-         <tr className="table--data">
-             <td>{item.name}</td>
-             <td>{item.username}</td>
-             <td>{item.email}</td>
-             <td>{item.admin}</td>
-             <td> <Link to={`/admin/update-user/${item._id}`} className="link"><i class="fas fa-pen"></i></Link> </td>
-             <td><Link onClick={() => deleteUser(item._id)} to="/admin/users" className="link"><i class="fas fa-trash-alt"></i></Link></td>
-         </tr>
-        );
-      })}
-    </table>
+        {users.map((item) => {
+          return (
+            <tr className="table--data">
+              <td>{item.name}</td>
+              <td>{item.username}</td>
+              <td>{item.email}</td>
+              <td>{item.admin}</td>
+              <td>
+                {" "}
+                <Link to={`/admin/update-user/${item._id}`} className="link">
+                  <i class="fas fa-pen"></i>
+                </Link>{" "}
+              </td>
+              <td>
+                <Link
+                  onClick={() => deleteUser(item._id)}
+                  to="/admin/users"
+                  className="link"
+                >
+                  <i class="fas fa-trash-alt"></i>
+                </Link>
+              </td>
+            </tr>
+          );
+        })}
+      </table>
     </>
   );
 }

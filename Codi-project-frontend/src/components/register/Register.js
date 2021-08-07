@@ -18,7 +18,7 @@ function Register(props) {
     e.preventDefault();
     if (form.passwordReg === form.checkPassword) {
       console.log("working");
-      Axios.post("http://localhost:4000/user/add", {
+      Axios.post(`${process.env.REACT_APP_API_URL}/user/add`, {
         name: form.nameReg,
         username: form.usernameReg,
         password: form.passwordReg,

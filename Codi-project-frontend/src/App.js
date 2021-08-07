@@ -17,9 +17,9 @@ import Axios from "axios";
 import { useEffect, useState } from "react";
 import Admin from "./pages/admin dashboard/Admin";
 import Shoes from "./pages/categories/Shoes";
-import Pants from "./pages/categories/Pants"
+import Pants from "./pages/categories/Pants";
 import Shorts from "./pages/categories/Shorts";
-import Shirts from "./pages/categories/Shirts"
+import Shirts from "./pages/categories/Shirts";
 import Accessories from "./pages/categories/Accessories";
 import Jackets from "./pages/categories/Jacket";
 
@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     let localToken = localStorage.getItem("token"); // Token Auth
-    Axios.post("http://localhost:4000/user/login", {
+    Axios.post(`${process.env.REACT_APP_API_URL}/user/login`, {
       token: localToken,
     })
       .then((res) => {
@@ -75,7 +75,7 @@ function App() {
                 <ShopHeader title="Shopping cart" />
                 <Cart />
               </Route>
-              <Route path= "/admin" component={Admin} />
+              <Route path="/admin" component={Admin} />
             </Switch>
             <Footer />
           </ProductProvider>

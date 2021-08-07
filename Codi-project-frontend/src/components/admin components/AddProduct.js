@@ -39,28 +39,26 @@ export default function AddProduct() {
   };
 
   const sendFile = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const formData = new FormData();
     formData.append("product", product);
-    formData.append("productImage", fileName );
-    console.log(product)
-    console.log(fileName)
+    formData.append("productImage", fileName);
+    console.log(product);
+    console.log(fileName);
 
-    axios.post('http://localhost:4000/product/create', formData)
-    .then(res => {
-      console.log("hi", res)
-    })
-    .catch(err => {
-      console.log("ayre", err)
-    })
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/product/create`, formData)
+      .then((res) => {
+        console.log("hi", res);
+      })
+      .catch((err) => {
+        console.log("ayre", err);
+      });
   };
 
   return (
     <div className="user--form--container">
-      <form
-        encType="multipart/form-data"
-        className="user--form"
-      >
+      <form encType="multipart/form-data" className="user--form">
         <div className="form--label--input">
           <label htmlFor="image">Image</label>
           <input
